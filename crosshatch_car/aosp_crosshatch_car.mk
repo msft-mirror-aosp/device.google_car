@@ -48,17 +48,24 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
             android.hardware.automotive.audiocontrol@1.0-service \
-	    android.hardware.automotive.evs@1.0-service
+            android.hardware.automotive.evs@1.0-service
 
 # Car init.rc
 PRODUCT_COPY_FILES += \
             packages/services/Car/car_product/init/init.bootstat.rc:root/init.bootstat.rc \
             packages/services/Car/car_product/init/init.car.rc:root/init.car.rc \
-	    $(LOCAL_PATH)/vendor/automotive.evs@1.0-service.rc:/vendor/etc/init/android.hardware.automotive.evs@1.0-service.rc
+            $(LOCAL_PATH)/vendor/automotive.evs@1.0-service.rc:/vendor/etc/init/android.hardware.automotive.evs@1.0-service.rc
 
 # Override heap growth limit due to high display density on device
 PRODUCT_PROPERTY_OVERRIDES += \
             dalvik.vm.heapgrowthlimit=256m
+
+PRODUCT_PACKAGE_OVERLAYS += device/google_car/crosshatch_car/overlay
+
+# Pre-create users
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    android.car.number_pre_created_users=1 \
+    android.car.number_pre_created_guests=1
 
 # Enable landscape
 PRODUCT_COPY_FILES += \
