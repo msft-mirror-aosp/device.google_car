@@ -32,21 +32,14 @@ PRODUCT_PACKAGES_DEBUG += \
 
 BOARD_SEPOLICY_DIRS += device/google_car/common/sepolicy
 
-# EVS v1.1
-PRODUCT_PACKAGES += android.automotive.evs.manager@1.1 \
-                    android.hardware.automotive.evs@1.1-sample \
-                    evs_app
-
-PRODUCT_PRODUCT_PROPERTIES += persist.automotive.evs.mode=0
-
 # Automotive display service
 PRODUCT_PACKAGES += android.frameworks.automotive.display@1.0-service
 
-# Sepolicy for EVS
-include packages/services/Car/cpp/evs/sepolicy/evs.mk
-
 # Sepolicy for occupant awareness system
 include packages/services/Car/car_product/occupant_awareness/OccupantAwareness.mk
+
+# Sepolicy for compute pipe system
+include packages/services/Car/cpp/computepipe/products/computepipe.mk
 
 PRODUCT_COPY_FILES += \
     device/google_car/common/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \

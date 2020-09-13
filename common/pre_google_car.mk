@@ -27,7 +27,6 @@ PRODUCT_ENFORCE_RRO_TARGETS :=
 # Enable mainline checking
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS :=
 
-
 # All components inherited here go to system image
 #
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -91,6 +90,9 @@ PRODUCT_COPY_FILES += \
 # broadcast radio feature
  PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.broadcastradio.xml:system/etc/permissions/android.hardware.broadcastradio.xml
+
+# Include EVS reference implementations
+ENABLE_EVS_SAMPLE := true
 
 #
 # All components inherited here go to vendor image
