@@ -32,9 +32,6 @@ PRODUCT_PACKAGES_DEBUG += \
 
 BOARD_SEPOLICY_DIRS += device/google_car/common/sepolicy
 
-# Automotive display service
-PRODUCT_PACKAGES += android.frameworks.automotive.display@1.0-service
-
 # Sepolicy for occupant awareness system
 include packages/services/Car/car_product/occupant_awareness/OccupantAwareness.mk
 
@@ -43,3 +40,7 @@ include packages/services/Car/cpp/computepipe/products/computepipe.mk
 
 PRODUCT_COPY_FILES += \
     device/google_car/common/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+
+PRODUCT_PROPERTY_OVERRIDES += \
+        ro.boot.wificountrycode=00 \
+        log.tag.CarTrustAgentUnlockEvent=I
