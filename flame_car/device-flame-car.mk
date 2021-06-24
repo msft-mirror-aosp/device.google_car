@@ -25,7 +25,7 @@ PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=250
 
 # Audio XMLs for flame
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_policy_volumes_flame.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml
+    device/google/coral/audio/audio_policy_volumes_flame.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml
 
 # Bluetooth Tx power caps for flame
 PRODUCT_COPY_FILES += \
