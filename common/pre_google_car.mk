@@ -46,7 +46,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
 # Auto modules
 PRODUCT_PACKAGES += \
             android.hardware.broadcastradio@2.0-service \
-            android.hardware.automotive.vehicle@2.0-service
+            android.hardware.automotive.vehicle@2.0-default-service
 
 # Additional selinux policy
 BOARD_SEPOLICY_DIRS += device/google_car/common/sepolicy
