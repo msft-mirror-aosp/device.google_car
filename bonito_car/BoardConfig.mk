@@ -1,5 +1,5 @@
 #
-# Copyright 2020 The Android Open Source Project
+# Copyright (C) 2020 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,11 +14,14 @@
 # limitations under the License.
 #
 
-PHONE_CAR_BOARD_CONFIG := device/google_car/sargo_car/BoardConfig.mk
+# Contents of this file were copied from device/google/bonito/bonito/BoardConfig.mk,
+# except for:
+#
+# * TARGET_SCREEN_DENSITY is scaled down by 1.75x
 
-$(call inherit-product, packages/services/Car/car_product/build/car.mk)
+TARGET_BOOTLOADER_BOARD_NAME := bonito
+TARGET_SCREEN_DENSITY := 250
+TARGET_RECOVERY_UI_MARGIN_HEIGHT := 165
 
-$(call inherit-product, device/google/bonito/device-sargo.mk)
-
-PRODUCT_PRODUCT_PROPERTIES+= \
-    ro.adb.secure=0
+include device/google/bonito/BoardConfig-common.mk
+-include vendor/google_devices/bonito/proprietary/BoardConfigVendor.mk
