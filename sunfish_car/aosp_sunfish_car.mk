@@ -1,5 +1,5 @@
 #
-# Copyright 2019 The Android Open Source Project
+# Copyright 2020 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,13 +15,13 @@
 #
 
 $(call inherit-product, device/google_car/common/pre_google_car.mk)
-$(call inherit-product, device/google_car/coral_car/device-coral-car.mk)
-$(call inherit-product-if-exists, vendor/google_devices/coral/proprietary/device-vendor.mk)
-$(call inherit-product-if-exists, vendor/google_devices/coral/prebuilts/device-vendor-coral.mk)
+$(call inherit-product, device/google_car/sunfish_car/device-sunfish-car.mk)
+$(call inherit-product-if-exists, vendor/google_devices/sunfish/proprietary/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/google_devices/sunfish/prebuilts/device-vendor-sunfish.mk)
 $(call inherit-product, device/google_car/common/post_google_car.mk)
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := Android
-PRODUCT_NAME := aosp_coral_car
-PRODUCT_DEVICE := coral
-PRODUCT_MODEL := AOSP on coral
+PRODUCT_NAME := aosp_sunfish_car
+PRODUCT_DEVICE := sunfish
+PRODUCT_MODEL := AOSP on sunfish

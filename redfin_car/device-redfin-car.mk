@@ -14,11 +14,12 @@
 # limitations under the License.
 #
 
-PHONE_CAR_BOARD_CONFIG := device/google_car/sargo_car/BoardConfig.mk
+PHONE_CAR_BOARD_CONFIG := device/google_car/redfin_car/BoardConfig.mk
 
 $(call inherit-product, packages/services/Car/car_product/build/car.mk)
 
-$(call inherit-product, device/google/bonito/device-sargo.mk)
+$(call inherit-product, device/google/redfin/device-redfin.mk)
 
 PRODUCT_PRODUCT_PROPERTIES+= \
     ro.adb.secure=0
+
