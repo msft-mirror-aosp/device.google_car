@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-PHONE_CAR_BOARD_CONFIG := device/google_car/bonito_car/BoardConfig.mk
+PHONE_CAR_BOARD_PRODUCT := bonito_car
 
 $(call inherit-product, packages/services/Car/car_product/build/car.mk)
 
