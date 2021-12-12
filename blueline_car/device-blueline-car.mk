@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-PHONE_CAR_BOARD_CONFIG := device/google_car/blueline_car/BoardConfig.mk
+PHONE_CAR_BOARD_PRODUCT := blueline_car
 
 ENABLE_EVS_SAMPLE := true
 ifeq ($(ENABLE_EVS_SAMPLE), true)
