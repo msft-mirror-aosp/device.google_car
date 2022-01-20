@@ -15,11 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/blueline_car/aosp_blueline_car.mk \
     $(LOCAL_DIR)/bonito_car/aosp_bonito_car.mk \
     $(LOCAL_DIR)/bramble_car/aosp_bramble_car.mk \
     $(LOCAL_DIR)/coral_car/aosp_coral_car.mk \
-    $(LOCAL_DIR)/crosshatch_car/aosp_crosshatch_car.mk \
     $(LOCAL_DIR)/flame_car/aosp_flame_car.mk \
     $(LOCAL_DIR)/oriole_car/aosp_oriole_car.mk \
     $(LOCAL_DIR)/raven_car/aosp_raven_car.mk \
@@ -29,11 +27,9 @@ PRODUCT_MAKEFILES := \
 
 
 COMMON_LUNCH_CHOICES := \
-    aosp_blueline_car-userdebug \
     aosp_bonito_car-userdebug \
     aosp_bramble_car-userdebug \
     aosp_coral_car-userdebug \
-    aosp_crosshatch_car-userdebug \
     aosp_flame_car-userdebug \
     aosp_oriole_car-userdebug \
     aosp_raven_car-userdebug \
