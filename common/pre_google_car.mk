@@ -25,7 +25,7 @@ DEVICE_FRAMEWORK_MANIFEST_FILE += device/google_car/common/manifest.xml
 PRODUCT_ENFORCE_RRO_TARGETS :=
 
 # Enable mainline checking
-PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS :=
+PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := false
 
 # All components inherited here go to system image
 #
